@@ -8,6 +8,7 @@ This project implements an HTTP server with rate limiting. It ensures no more th
 - [Installation](#installation)
 - [Endpoints](#endpoints)
 - [Usage](#usage)
+- [Test](#test)
 - [License](#license)
 
 ## Introduction
@@ -42,7 +43,12 @@ The API rate limiting server limits the number of requests per second to prevent
    curl -w %{http_code}http://localhost:8080
    
 
-
+## Test
+1. Run Httperf tool to test the rate limiting 
+    Below httperf command is sending 6 connection parallelly in one sec 
+    Out of 6 only 1 will receive 503 code (due to throttling) remaining will receive based on behavior 
+    
+    #httperf --server localhost --port 8080 --uri /healthcheck --num-conns 6
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
