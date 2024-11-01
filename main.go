@@ -10,20 +10,6 @@ import (
 var requestCount int
 var requesttime time.Time
 
-// var backendserver = []string{"localhost:8081", "localhost:8082", "localhost:8083"}
-
-// func loadbalancerserver(backendserver []string) (balancer string) {
-// 	for _, b := range backendserver {
-// 		resp, err := http.Get(string(b))
-// 		if err != nil || resp.StatusCode != http.StatusOK {
-// 			log.Printf("Error connecting to backend server %s: %s", string(b), err)
-// 			continue
-// 		}
-// 		defer resp.Body.Close()
-// 	}
-// 	return backendserver[0]
-// }
-
 func genericResponse(w http.ResponseWriter, message string, status int) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
