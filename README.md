@@ -22,7 +22,8 @@ The API rate limiting server limits the number of requests per second to prevent
 1. Clone the repository:
 
    git clone https://github.com/yourusername/api-rate-limiting-server.git
-   cd api-rate-limiting-server
+   cd Simple-API-RateLimit
+
    
 2. Install dependencies:
    go mod tidy
