@@ -21,7 +21,7 @@ The API rate limiting server limits the number of requests per second to prevent
 ## Installation
 1. Clone the repository:
 
-   git clone https://github.com/yourusername/api-rate-limiting-server.git
+   git clone https://github.com/surajupadhaya/Simple-API-RateLimit
    cd Simple-API-RateLimit
 
    
